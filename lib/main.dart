@@ -1,5 +1,7 @@
+import 'package:app/constants.dart';
 import 'package:app/features/aplash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -11,10 +13,11 @@ class BoolApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-home: SplashView(),
-    )
-
-    ;
+    return GetMaterialApp(
+      debugShowCheckedModeBanner:false,
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: kprimaryColor),
+      home: const SplashView(),
+    );
   }
 }
