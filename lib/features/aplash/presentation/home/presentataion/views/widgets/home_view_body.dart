@@ -1,4 +1,3 @@
-import 'package:app/constants.dart';
 import 'package:app/core/utils/assets.dart';
 import 'package:app/core/utils/styles.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/customAppBar.dart';
@@ -19,6 +18,7 @@ class HomeViewBody extends StatelessWidget {
           FeaturedBookListView(),
           const SizedBox(height: 30),
           Text("Best Seller", style: Styles.textStyle20),
+          const SizedBox(height: 20),
           BestSelerListViewItem(),
         ],
       ),
@@ -38,7 +38,7 @@ class BestSelerListViewItem extends StatelessWidget {
           AspectRatio(
             aspectRatio: 2.5 / 3.9,
             child: Container(
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 image: DecorationImage(
                   fit: BoxFit.fill,
@@ -47,9 +47,21 @@ class BestSelerListViewItem extends StatelessWidget {
               ),
             ),
           ),
-          Column(children: [
-      
-          ],
+  const SizedBox(width: 30),
+          Column(
+            children: [
+            
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: const Text(
+                  "Harry Potter and the Goblet of Fire",
+                  style: Styles.textStyle20,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  
+                ),
+              ),
+            ],
           ),
         ],
       ),
