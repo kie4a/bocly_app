@@ -1,3 +1,4 @@
+import 'package:app/constants.dart';
 import 'package:app/core/utils/assets.dart';
 import 'package:app/core/utils/styles.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/customAppBar.dart';
@@ -17,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
           const CustomAppBar(),
           FeaturedBookListView(),
           const SizedBox(height: 30),
-          Text("Best Seller", style: Styles.titleLarg),
+          Text("Best Seller", style: Styles.textStyle20),
           BestSelerListViewItem(),
         ],
       ),
