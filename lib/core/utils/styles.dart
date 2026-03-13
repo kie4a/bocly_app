@@ -8,8 +8,8 @@ fontWeight: FontWeight.w600
   );
 
 static const titleLarg = TextStyle(
-fontSize: 22,
-fontWeight: FontWeight.w600
+fontSize: 20,
+fontWeight: FontWeight.w900
 
   );
 
