@@ -16,7 +16,12 @@ class BoolApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner:false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kprimaryColor),
+        scaffoldBackgroundColor: kprimaryColor,
+        textTheme: TextTheme(
+          
+
+        )
+        ),
       home: const SplashView(),
     );
   }
