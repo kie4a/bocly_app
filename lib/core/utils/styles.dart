@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 abstract class Styles {
   static const textStyle20 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w600
-    ,
-    fontFamily: kGtSectraFine
+    fontWeight: FontWeight.w600,
+   
+    height: 1.2,
   );
 
   static const textStyle22 = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.normal,
-    fontFamily: kGtSectraFine,
+
   );
 
   static const textStyle16 = TextStyle(
