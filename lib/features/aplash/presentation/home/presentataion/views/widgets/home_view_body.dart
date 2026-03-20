@@ -4,7 +4,6 @@ import 'package:app/features/aplash/presentation/home/presentataion/views/widget
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/customAppBar.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/featured_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -21,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: const CustomAppBar(),
               ),
-              FeaturedBookListView(),
+              const FeaturedBookListView(),
               const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -31,12 +30,26 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        const SliverFillRemaining(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: BestSellerListView(),
+
+        SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          sliver: SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) => const Padding(
+                padding: EdgeInsets.symmetric(vertical: 8),
+                child: BestSelerListViewItem(),
+              ),
+              childCount: 10,
+            ),
           ),
         ),
+
+        // const SliverFillRemaining(
+        //   child: Padding(
+        //     padding: const EdgeInsets.symmetric(horizontal: 5),
+        //     child: BestSellerListView(),
+        //   ),
+        // ),
       ],
     );
   }
