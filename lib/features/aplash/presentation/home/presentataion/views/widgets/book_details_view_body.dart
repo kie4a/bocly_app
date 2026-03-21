@@ -1,3 +1,4 @@
+import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -5,6 +6,11 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        CustomBookDetailsAppBar(),
+
+         ],
+         );
   }
 }
