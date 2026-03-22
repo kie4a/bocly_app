@@ -1,10 +1,10 @@
 import 'package:app/constants.dart';
 import 'package:app/core/utils/styles.dart';
-import 'package:app/core/widgets/custom_button.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_action.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_rating.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_app_bar.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_book_image_item.dart';
+import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -17,7 +17,7 @@ class BookDetailsViewBody extends StatelessWidget {
       children: [
         CustomBookDetailsAppBar(),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .25),
+          padding: EdgeInsets.symmetric(horizontal: width * .27),
           child: CustomBookImageItem(),
         ),
         const SizedBox(height: 5),
@@ -41,8 +41,18 @@ class BookDetailsViewBody extends StatelessWidget {
         ),
         SizedBox(height: 5),
         BookRating(mainAxisAlignment: MainAxisAlignment.center),
- SizedBox(height: 10),
+        SizedBox(height: 10),
         BooksAction(),
+         SizedBox(height: 10),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "You can also like",
+            style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
+          ),
+        ),const SizedBox(height: 10,),
+       const similarBooksListWiew()
+       ,const SizedBox(height: 10,),
       ],
     );
   }
