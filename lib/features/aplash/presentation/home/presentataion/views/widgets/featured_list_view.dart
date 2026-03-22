@@ -1,5 +1,4 @@
-
-import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/customlistviewitem.dart';
+import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBookListView extends StatelessWidget {
@@ -15,7 +14,7 @@ class FeaturedBookListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 6),
-            child: const CustomListViewItem(),
+            child: const CustomBookImageItem(),
           );
         },
       ),
