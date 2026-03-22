@@ -1,5 +1,7 @@
 import 'package:app/constants.dart';
 import 'package:app/core/utils/styles.dart';
+import 'package:app/core/widgets/custom_button.dart';
+import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_action.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_rating.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_app_bar.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_book_image_item.dart';
@@ -12,17 +14,16 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Column(
-      
       children: [
         CustomBookDetailsAppBar(),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .2),
+          padding: EdgeInsets.symmetric(horizontal: width * .25),
           child: CustomBookImageItem(),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 5),
         Text(
           "The Jungle Book",
-          style: Styles.textStyle32.copyWith(
+          style: Styles.textStyle30.copyWith(
             fontFamily: kGtSectraFine,
             fontWeight: FontWeight.bold,
           ),
@@ -35,11 +36,13 @@ class BookDetailsViewBody extends StatelessWidget {
             style: Styles.textStyle20.copyWith(
               color: Colors.grey,
               fontStyle: FontStyle.italic,
-              
             ),
           ),
-        ),SizedBox(height: 5,),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center,),
+        ),
+        SizedBox(height: 5),
+        BookRating(mainAxisAlignment: MainAxisAlignment.center),
+ SizedBox(height: 10),
+        BooksAction(),
       ],
     );
   }
