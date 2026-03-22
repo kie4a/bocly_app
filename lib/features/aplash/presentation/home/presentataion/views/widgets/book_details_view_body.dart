@@ -13,47 +13,57 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return Column(
-      children: [
-        CustomBookDetailsAppBar(),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .27),
-          child: CustomBookImageItem(),
-        ),
-        const SizedBox(height: 5),
-        Text(
-          "The Jungle Book",
-          style: Styles.textStyle30.copyWith(
-            fontFamily: kGtSectraFine,
-            fontWeight: FontWeight.bold,
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+      child: Column(
+        children: [
+          CustomBookDetailsAppBar(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * .27),
+            child: CustomBookImageItem(),
           ),
-        ),
-        const SizedBox(height: 2),
-        Opacity(
-          opacity: .7,
-          child: Text(
-            "Rudyard Kipling",
-            style: Styles.textStyle20.copyWith(
-              color: Colors.grey,
-              fontStyle: FontStyle.italic,
+          const SizedBox(height: 5),
+          Text(
+            "The Jungle Book",
+            style: Styles.textStyle30.copyWith(
+              fontFamily: kGtSectraFine,
+              fontWeight: FontWeight.bold,
             ),
           ),
-        ),
-        SizedBox(height: 5),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center),
-        SizedBox(height: 10),
-        BooksAction(),
-         SizedBox(height: 10),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "You can also like",
-            style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
+          const SizedBox(height: 2),
+          Opacity(
+            opacity: .7,
+            child: Text(
+              "Rudyard Kipling",
+              style: Styles.textStyle20.copyWith(
+                color: Colors.grey,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
           ),
-        ),const SizedBox(height: 10,),
-       const similarBooksListWiew()
-       ,const SizedBox(height: 10,),
+          SizedBox(height: 5),
+          BookRating(mainAxisAlignment: MainAxisAlignment.center),
+          SizedBox(height: 10),
+          BooksAction(),
+        const  Expanded(child:
+           SizedBox(height: 10)
+           ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "You can also like",
+              style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          const SizedBox(height: 10),
+          const similarBooksListWiew(),
+          const SizedBox(height: 10),
+        ],
+      ),
+        )
       ],
+      
     );
   }
 }
