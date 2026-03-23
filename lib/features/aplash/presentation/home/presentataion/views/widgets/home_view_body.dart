@@ -1,5 +1,5 @@
 import 'package:app/core/utils/styles.dart';
-import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/best_seller_list_view_item.dart';
+import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_list_view_item.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/customa_app_bar_home_view.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/featured_list_view.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class HomeViewBody extends StatelessWidget {
             delegate: SliverChildBuilderDelegate(
               (context, index) => const Padding(
                 padding: EdgeInsets.symmetric(vertical: 8),
-                child: BestSelerListViewItem(),
+                child: BookListViewItem(),
               ),
               childCount: 10,
             ),

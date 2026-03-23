@@ -6,8 +6,8 @@ import 'package:app/features/aplash/presentation/home/presentataion/views/widget
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSelerListViewItem extends StatelessWidget {
-  const BestSelerListViewItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
