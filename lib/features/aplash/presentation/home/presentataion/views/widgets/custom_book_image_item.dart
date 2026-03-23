@@ -11,10 +11,10 @@ class CustomBookImageItem extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.5 / 3.9,
         child: Container(
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: const AssetImage(AssetsDate.testImage),
+              image:  AssetImage(AssetsDate.testImage),
             ),
           ),
         ),

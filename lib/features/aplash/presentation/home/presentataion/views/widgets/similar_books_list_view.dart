@@ -1,21 +1,22 @@
-
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/custom_book_image_item.dart';
 import 'package:flutter/material.dart';
 
-class similarBooksListWiew extends StatelessWidget {
-  const similarBooksListWiew({super.key});
+class SimilarBooksListView extends StatelessWidget {
+  const SimilarBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.17,
-
+      height: MediaQuery.of(context).size.height * 0.22,
       child: ListView.builder(
+        itemCount: 10, 
         scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6),
-            child: const CustomBookImageItem(),
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6),
+            child: CustomBookImageItem(),
           );
         },
       ),

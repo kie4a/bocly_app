@@ -1,6 +1,4 @@
-import 'package:app/constants.dart';
 import 'package:app/core/utils/assets.dart';
-import 'package:app/features/aplash/presentation/home/presentataion/views/view_models/home_view.dart';
 import 'package:app/features/aplash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

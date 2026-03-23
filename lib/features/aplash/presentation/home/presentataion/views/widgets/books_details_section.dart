@@ -1,4 +1,3 @@
-
 import 'package:app/constants.dart';
 import 'package:app/core/utils/styles.dart';
 import 'package:app/features/aplash/presentation/home/presentataion/views/widgets/book_action.dart';
@@ -11,15 +10,17 @@ class BookDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
+
     return Column(
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .27),
-          child: CustomBookImageItem(),
+          child: const CustomBookImageItem(),
         ),
-        BookDetailsSection(),
-        const SizedBox(height: 5),
+
+        const SizedBox(height: 10),
+   
         Text(
           "The Jungle Book",
           style: Styles.textStyle30.copyWith(
@@ -27,7 +28,9 @@ class BookDetailsSection extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+
         const SizedBox(height: 2),
+
         Opacity(
           opacity: .7,
           child: Text(
@@ -38,12 +41,16 @@ class BookDetailsSection extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 5),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center),
-        SizedBox(height: 10),
-        BooksAction(),
+
+        const SizedBox(height: 5),
+
+        BookRating(
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+
+        
+        const BooksAction(),
       ],
     );
   }
 }
-
