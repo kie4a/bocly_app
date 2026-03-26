@@ -14,14 +14,11 @@ class BoolApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kprimaryColor,
-        textTheme: GoogleFonts.montserratTextTheme(
-          ThemeData.dark().textTheme
-        )
-        ),
-     
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+      ),
     );
   }
 }

@@ -16,7 +16,7 @@ class BookModel extends Equatable {
 	final SearchInfo? searchInfo;
 
 	const BookModel({
-		this.kind, 
+		this.kind , 
 		this.id, 
 		this.etag, 
 		this.selfLink, 
