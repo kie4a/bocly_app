@@ -12,10 +12,9 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     emit(FeaturedBooksLoding());
     var result = await homeRepol.fetchFeaturedBooks();
 
-    result.fold((failure) => {
-      emit(FeaturedBooksFilure(failure.errMassage))
-    }, (books) => {
-      emit(FeaturedBooksSuccess(books))
-    });
+    result.fold(
+      (failure) => {emit(FeaturedBooksFilure(failure.errMassage))},
+      (books) => {emit(FeaturedBooksSuccess(books))},
+    );
   }
 }
