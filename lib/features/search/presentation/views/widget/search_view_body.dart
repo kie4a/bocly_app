@@ -1,8 +1,6 @@
-import 'package:app/core/utils/styles.dart';
 import 'package:app/features/search/presentation/views/widget/custom_search_text_field.dart';
 import 'package:app/features/search/presentation/views/widget/search_result_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 class SearchViewBody extends StatelessWidget {
